@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<h1 class="page-header">喝喝喝</h1>
+		<h1 class="page-header">喝喝喝(组件)</h1>
 		<h3 class="page-header">面包屑导航</h3>
 		<p class="lead">酒类：</p>
 		<ol class="breadcrumb">
@@ -207,6 +207,17 @@
 			<div class="panel-footer">
 				is bad
 			</div>
+			<h3>iframe</h3>
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe src="http://www.baidu.com" class="embed-responsive-item" scrolling="yes" style="height: 200px;"></iframe>
+			</div>
+			<h3>Well</h3>
+			<div class="well">
+				linux is very              much!
+			</div>
+			<h3>pre</h3>
+			<pre>linux is very              much!</pre>
+			
 		</div>
 		
 	</div>
