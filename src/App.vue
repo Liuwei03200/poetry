@@ -20,25 +20,24 @@
 					<!-- 第二部分 -->
 					<div class="collapse navbar-collapse" id="navbar-1">
 						<ul class="nav navbar-nav">
-							<!-- <li><router-link tag="div" to="/">吃</router-link></li> -->
-							<li :class="choose==1?'active':false" @click="changeTitle(1)"><router-link to="/food" >吃</router-link></li>
-							<li :class="choose==2?'active':false" @click="changeTitle(2)"><router-link to="/drink">喝</router-link></li>
-							<li :class="choose==3?'active':false" @click="changeTitle(3)"><router-link to="/play">玩</router-link></li>
-							<li :class="choose==4?'active':false" @click="changeTitle(4)"><router-link to="/happy">乐</router-link></li>
+							<li class="dropdown" :class="choose==1?'active':false">
+								<a class="dropdown-toggle" :class="choose==1?'active':false" data-toggle="dropdown" href="#">生活<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li @click="changeTitle(1)"><router-link to="/clothes">衣</router-link></li>
+									<li @click="changeTitle(1)"><router-link to="/food">食</router-link></li>
+									<li class="divider"></li>
+									<li @click="changeTitle(1)"><router-link to="/house">住</router-link></li>
+									<li @click="changeTitle(1)"><router-link to="/tourism">行</router-link></li>
+								</ul>
+							</li>
+							<li :class="choose==2?'active':false" @click="changeTitle(2)"><router-link to="/eat" >吃</router-link></li>
+							<li :class="choose==3?'active':false" @click="changeTitle(3)"><router-link to="/drink">喝</router-link></li>
+							<li :class="choose==4?'active':false" @click="changeTitle(4)"><router-link to="/play">玩</router-link></li>
+							<li :class="choose==5?'active':false" @click="changeTitle(5)"><router-link to="/happy">乐</router-link></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
-			
-			<ul class="nav nav-tabs">
-				<li :class="choose==1?'active':false" @click="changeTitle(1)"><router-link to="/" >吃</router-link></li>
-				<li :class="choose==2?'active':false" @click="changeTitle(2)"><router-link to="/drink">喝</router-link></li>
-				<li :class="choose==3?'active':false" @click="changeTitle(3)"><router-link to="/play">玩</router-link></li>
-				<li :class="choose==4?'active':false" @click="changeTitle(4)"><router-link to="/happy">乐</router-link></li>
-				<li class="pull-right" :class="choose==5?'active':false" @click="changeTitle(5)"><router-link to="/register">注册</router-link></li>
-				<li class="pull-right" :class="choose==6?'active':false" @click="changeTitle(6)"><router-link to="/login">登陆</router-link></li>
-			</ul>
-			<div class="clearfix"></div>
 		</div>
     <router-view/>
   </div>
