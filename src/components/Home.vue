@@ -36,8 +36,7 @@
 							<div class="caption text-center">
 								<h3>{{vv.title}} <small>{{vv.dynasty}}·{{vv.author}}</small></h3>
 								<p class="lead " v-if="nnn<=3" v-for="vvv,nnn in vv.info">{{vvv}}</p>
-								<p v-if="vv.info.length>4">
-									<button class="btn btn-primary" data-toggle="modal" :data-target="'#myModal'+n+'_'+nn">后续</button>
+								<button class="btn btn-primary absolute_btn_r_b" v-if="vv.info.length>4" data-toggle="modal" :data-target="'#myModal'+n+'_'+nn">后续</button>
 									<!-- Modal -->
 									<div class="modal fade" :id="'myModal'+n+'_'+nn">
 										<div class="modal-dialog">
@@ -51,7 +50,6 @@
 											</div>
 										</div>
 									</div>
-								</p>
 							</div>
 						</div>
 					</div>
@@ -177,5 +175,10 @@
 	.home-middle img {
 		width: 100%;
 		height: ;
+	}
+	.absolute_btn_r_b{
+		position: absolute;
+		bottom:9%;
+		right: 8%;
 	}
 </style>
